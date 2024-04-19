@@ -1,0 +1,117 @@
+{% extends 'main.html' %}
+{% block content %}
+<style>
+body {
+    font-family: Cambria;
+    height: 100%;
+    background-image: linear-gradient(#00308F, #89CFF0);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+<div class="row" style="margin-bottom: 180px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <center><h1 style="color:white;">Lung Cancer Predictor</h1></center>
+        <div class="card card-body" style="border: 1px solid black; background-color: #89CFF0">
+            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Age" placeholder="Age (in years)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Gender" placeholder="Gender (0: Male; 1: Female)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Smoking" placeholder="Smoking (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Yellow Fingers" placeholder="Yellow Fingers (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Anxiety" placeholder="Anxiety (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Peer Pressure" placeholder="Peer Pressure (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Chronic Disease" placeholder="Chronic Disease (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Fatigue" placeholder="Fatigue (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Allergy" placeholder="Allergy (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Wheezing" placeholder="Wheezing (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Alcohol Consumption" placeholder="Alcohol Consumption (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Coughing" placeholder="Coughing (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Shortness Of Breadth" placeholder="Shortness Of Breadth (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Swallowing Difficulty" placeholder="Swallowing Difficulty (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #E0FFFF" class="form-control" type="text" name="Chest Pain" placeholder="Chest Pain (0: NO; 1: YES)">
+                        </div>
+                    </div>
+                </div>
+                <input style="background-color: #00308F" type="submit" class="btn btn-info btn-block" value="Predict">
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{% endblock %}
