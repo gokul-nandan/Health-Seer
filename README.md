@@ -1,1 +1,1 @@
-# Disease-prediction-Data-Science
+# Multiple-Disease-Prediction-System
